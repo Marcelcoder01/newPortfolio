@@ -1,0 +1,37 @@
+<section #aboutSection id="about" class="about">
+  <div class="about__content">
+    <h2 class="about__heading">Sobre mí</h2>
+    <p class="about__description">
+      {{ description }}
+    </p>
+  </div>
+  <div class="about__stack">
+    <h3 class="about__stack-title">Stack principal</h3>
+    <ul class="about__stack-list">
+      @for (tech of stack; track tech) {
+        <li>
+          <button
+            type="button"
+            class="about__tag"
+            [class.about__tag--active]="selectedTech() === tech"
+            (click)="onTechClick(tech, $event)"
+          >
+            {{ tech }}
+          </button>
+        </li>
+      }
+    </ul>
+  </div>
+  @if (selectedTechInfo(); as info) {
+    <div class="about__tech-overlay" (click)="closeTechInfo()">
+      <div class="about__tech-info" (click)="$event.stopPropagation()">
+        <button type="button" class="about__tech-close" (click)="closeTechInfo()" aria-label="Cerrar">×</button>
+        <h4 class="about__tech-name">{{ info.name }}</h4>
+        <p class="about__tech-description">{{ info.description }}</p>
+        <span class="about__tech-proficiency">{{ info.proficiency }}</span>
+      </div>
+    </div>
+  }
+</section>
+
+

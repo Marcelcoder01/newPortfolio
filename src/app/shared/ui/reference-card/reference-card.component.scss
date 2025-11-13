@@ -1,0 +1,75 @@
+.reference-card {
+  background: rgba(28, 31, 38, 0.9);
+  border-radius: 20px;
+  padding: 1.5rem;
+  border: 1px solid rgba(139, 233, 253, 0.15);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  display: grid;
+  gap: 1rem;
+  backdrop-filter: blur(12px);
+  transition: transform 0.4s ease, border-color 0.4s ease;
+
+  &:hover {
+    transform: translateY(-6px);
+    border-color: rgba(0, 255, 153, 0.4);
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    object-fit: cover;
+    background: linear-gradient(135deg, rgba(139, 233, 253, 0.2), rgba(0, 255, 153, 0.2));
+
+    &--placeholder {
+      display: grid;
+      place-items: center;
+      color: #8be9fd;
+      font-weight: 600;
+      font-size: 1.125rem;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #fff;
+  }
+
+  &__subtitle {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.95rem;
+  }
+
+  &__description {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.6;
+    font-size: 0.95rem;
+  }
+
+  &__footer {
+    display: flex;
+  }
+
+  &__link {
+    color: #8be9fd;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 0.03em;
+
+    &:hover {
+      color: #00ff99;
+    }
+  }
+}
+
+

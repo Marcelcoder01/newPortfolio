@@ -1,0 +1,134 @@
+.experience {
+  height: 100vh;
+  padding: 6rem clamp(2rem, 6vw, 6rem);
+  scroll-snap-align: start;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 3rem;
+
+  &__header {
+    grid-column: 1 / span 5;
+    display: grid;
+    gap: 1rem;
+    align-content: start;
+  }
+
+  &__heading {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: clamp(2rem, 5vw, 3rem);
+    letter-spacing: 0.08em;
+    color: #fff;
+  }
+
+  &__subtitle {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.6;
+  }
+
+  &__timeline {
+    grid-column: 6 / -1;
+    position: relative;
+    padding-left: 2rem;
+    display: grid;
+    gap: 2.5rem;
+  }
+
+  &__timeline::before {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, rgba(139, 233, 253, 0.6), rgba(0, 255, 153, 0.1));
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 2rem;
+    position: relative;
+  }
+
+  &__marker {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #8be9fd, #00ff99);
+    margin-top: 0.75rem;
+    box-shadow: 0 0 18px rgba(139, 233, 253, 0.4);
+  }
+
+  &__content {
+    background: rgba(16, 18, 24, 0.85);
+    border: 1px solid rgba(139, 233, 253, 0.18);
+    border-radius: 20px;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  &__role {
+    margin: 0;
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+  }
+
+  &__company {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 500;
+  }
+
+  &__period {
+    color: #8be9fd;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+  }
+
+  &__description {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+  }
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    padding: 4rem clamp(1.5rem, 6vw, 3rem);
+
+    &__header {
+      grid-column: 1 / -1;
+    }
+
+    &__timeline {
+      grid-column: 1 / -1;
+      padding-left: 1.5rem;
+    }
+  }
+
+  @media (max-width: 640px) {
+    height: auto;
+    min-height: 100vh;
+
+    &__item {
+      grid-template-columns: 1fr;
+    }
+
+    &__marker {
+      display: none;
+    }
+
+    &__timeline::before {
+      left: 0;
+    }
+  }
+}
+
+

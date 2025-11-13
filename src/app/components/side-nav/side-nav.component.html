@@ -1,0 +1,18 @@
+<nav class="side-nav">
+  <ul class="side-nav__list">
+    @for (section of sections(); track section) {
+      <li>
+        <button
+          type="button"
+          class="side-nav__item"
+          [class.side-nav__item--active]="activeSection() === section"
+          (click)="scrollTo(section)"
+        >
+          {{ section }}
+        </button>
+      </li>
+    }
+  </ul>
+</nav>
+
+

@@ -1,0 +1,25 @@
+<article class="reference-card">
+  <header class="reference-card__header">
+    @if (avatarUrl) {
+      <img class="reference-card__avatar" [src]="avatarUrl" [alt]="title" />
+    } @else {
+      <div class="reference-card__avatar reference-card__avatar--placeholder">
+        {{ title[0] }}
+      </div>
+    }
+    <div>
+      <h3 class="reference-card__title">{{ title }}</h3>
+      <p class="reference-card__subtitle">{{ subtitle }}</p>
+    </div>
+  </header>
+  <p class="reference-card__description">{{ description }}</p>
+  @if (actionUrl) {
+    <footer class="reference-card__footer">
+      <a class="reference-card__link" [href]="actionUrl" target="_blank" rel="noopener noreferrer">
+        {{ actionLabel }}
+      </a>
+    </footer>
+  }
+</article>
+
+

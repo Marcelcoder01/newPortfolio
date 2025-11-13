@@ -1,0 +1,36 @@
+.button {
+  border: none;
+  border-radius: 999px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #000;
+  background: linear-gradient(135deg, #8be9fd, #00ff99);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  box-shadow: 0 10px 30px rgba(139, 233, 253, 0.2);
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 40px rgba(0, 255, 153, 0.3);
+  }
+
+  &:focus-visible {
+    outline: 2px solid #8be9fd;
+    outline-offset: 2px;
+  }
+
+  &--ghost {
+    background: transparent;
+    color: #8be9fd;
+    border: 1px solid rgba(139, 233, 253, 0.4);
+    box-shadow: none;
+
+    &:hover {
+      background: rgba(139, 233, 253, 0.12);
+      color: #fff;
+    }
+  }
+}
+
+

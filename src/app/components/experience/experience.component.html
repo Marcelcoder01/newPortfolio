@@ -1,0 +1,30 @@
+<section #experienceSection id="experience" class="experience">
+  <header class="experience__header">
+    <h2 class="experience__heading">Experiencia</h2>
+    <p class="experience__subtitle">
+      @if (experiences.length) {
+        <span>Transformando ideas en productos digitales desde 2022.</span>
+      } @else {
+        <span>Buscando nuevos desafíos profesionales.</span>
+      }
+    </p>
+  </header>
+
+  <div class="experience__timeline">
+    @for (item of experiences; track item.role) {
+      <article class="experience__item">
+        <div class="experience__marker"></div>
+        <div class="experience__content">
+          <h3 class="experience__role">{{ item.role }}</h3>
+          <p class="experience__company">{{ item.company }}</p>
+          <span class="experience__period">{{ item.period }}</span>
+          <p class="experience__description">
+            {{ item.description }}
+          </p>
+        </div>
+      </article>
+    }
+  </div>
+</section>
+
+

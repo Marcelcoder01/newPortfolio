@@ -1,0 +1,52 @@
+<section #contactSection id="contact" class="contact">
+  <div class="contact__grid">
+    <div class="contact__column">
+      <h2 class="contact__heading">Referencias</h2>
+      <div class="contact__cards">
+        @for (ref of references; track ref.title) {
+          <app-reference-card
+            [title]="ref.title"
+            [subtitle]="ref.subtitle"
+            [description]="ref.description"
+          />
+        }
+      </div>
+    </div>
+
+    <div class="contact__column">
+      <div class="contact__blogs">
+        <h3 class="contact__subheading">Blogs &amp; Proyectos</h3>
+        <div class="contact__cards">
+          @for (blog of blogs; track blog.title) {
+            <app-reference-card
+              [title]="blog.title"
+              [subtitle]="blog.subtitle"
+              [description]="blog.description"
+              [actionUrl]="blog.actionUrl"
+              actionLabel="Ver recurso"
+            />
+          }
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+  <div class="contact__cta" style="width: 100%; margin-top: 1rem">
+    <p class="contact__statement">
+      Let’s create <span>something remarkable.</span>
+    </p>
+    <app-button (clicked)="scrollToTop()">Start a project</app-button>
+    <ul class="contact__social">
+      @for (link of socialLinks; track link.label) {
+        <li>
+          <a class="contact__social-link" [href]="link.url" target="_blank" rel="noopener noreferrer">
+            {{ link.label }}
+          </a>
+        </li>
+      }
+    </ul>
+  </div>
+</section>
+
+
