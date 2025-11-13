@@ -21,8 +21,8 @@ export class AboutComponent {
   @ViewChild('aboutSection', { static: true }) private sectionRef!: ElementRef<HTMLElement>;
 
   protected readonly description =
-    'Desarrollador front-end enfocado en experiencias elegantes y escalables. ' +
-    'Me apasiona diseñar arquitecturas limpias con Angular, optimizar rendimiento y crear interfaces accesibles.';
+    'Front-end developer focused on elegant, scalable experiences. ' +
+    'I enjoy designing clean Angular architectures, optimizing performance, and creating accessible interfaces.';
 
   protected readonly stack = [
     'Angular 18+',
@@ -38,43 +38,43 @@ export class AboutComponent {
   private readonly techInfo: Record<string, TechInfo> = {
     'Angular 18+': {
       name: 'Angular 18+',
-      description: 'Arquitectura escalable con standalone components, control flow moderno y optimizaciones de rendimiento.',
-      proficiency: 'Avanzado'
+      description: 'Scalable architecture with standalone components, modern control flow, and performance optimizations.',
+      proficiency: 'Advanced'
     },
     'Signals': {
       name: 'Signals',
-      description: 'Manejo reactivo de estado con Signals de Angular, implementando patrones modernos de reactividad.',
-      proficiency: 'Avanzado'
+      description: 'Reactive state management with Angular Signals, implementing modern reactivity patterns.',
+      proficiency: 'Advanced'
     },
     'RxJS': {
       name: 'RxJS',
-      description: 'Programación reactiva con Observables, operadores avanzados y gestión eficiente de streams de datos.',
-      proficiency: 'Avanzado'
+      description: 'Reactive programming with Observables, advanced operators, and efficient stream management.',
+      proficiency: 'Advanced'
     },
     'Angular Material': {
       name: 'Angular Material',
-      description: 'Diseño de interfaces con componentes Material Design, theming personalizado y accesibilidad.',
-      proficiency: 'Avanzado'
+      description: 'Interface design with Material Design components, custom theming, and accessibility.',
+      proficiency: 'Advanced'
     },
     'PrimeNG': {
       name: 'PrimeNG',
-      description: 'Biblioteca de componentes empresariales para construir aplicaciones complejas con UI rica.',
-      proficiency: 'Avanzado'
+      description: 'Enterprise-grade component library for building complex applications with rich UI.',
+      proficiency: 'Advanced'
     },
     'NgRx': {
       name: 'NgRx',
-      description: 'Gestión de estado global con Redux pattern, effects, selectors y arquitectura escalable.',
-      proficiency: 'Avanzado'
+      description: 'Global state management with the Redux pattern, effects, selectors, and scalable architecture.',
+      proficiency: 'Advanced'
     },
     'TailwindCSS': {
       name: 'TailwindCSS',
-      description: 'Estilos utility-first para desarrollo rápido, diseño responsive y mantenimiento eficiente.',
-      proficiency: 'Avanzado'
+      description: 'Utility-first styling for rapid development, responsive design, and efficient maintenance.',
+      proficiency: 'Advanced'
     },
     'Unit-Testing': {
       name: 'Unit-Testing',
-      description: 'Testing con Jest/Vitest, Jasmine y Karma. Cobertura de código y TDD en proyectos Angular.',
-      proficiency: 'Intermedio-Avanzado'
+      description: 'Testing with Jest/Vitest, Jasmine, and Karma. Code coverage and TDD in Angular projects.',
+      proficiency: 'Intermediate-Advanced'
     }
   };
 

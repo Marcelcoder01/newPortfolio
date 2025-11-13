@@ -1,7 +1,7 @@
 <section #contactSection id="contact" class="contact">
   <div class="contact__grid">
     <div class="contact__column">
-      <h2 class="contact__heading">Referencias</h2>
+      <h2 class="contact__heading">References</h2>
       <div class="contact__cards">
         @for (ref of references; track ref.title) {
           <app-reference-card
@@ -15,7 +15,7 @@
 
     <div class="contact__column">
       <div class="contact__blogs">
-        <h3 class="contact__subheading">Blogs &amp; Proyectos</h3>
+        <h3 class="contact__subheading">Blogs &amp; Projects</h3>
         <div class="contact__cards">
           @for (blog of blogs; track blog.title) {
             <app-reference-card
@@ -23,7 +23,7 @@
               [subtitle]="blog.subtitle"
               [description]="blog.description"
               [actionUrl]="blog.actionUrl"
-              actionLabel="Ver recurso"
+              actionLabel="View resource"
             />
           }
         </div>

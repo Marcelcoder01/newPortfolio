@@ -1,12 +1,12 @@
 <section #aboutSection id="about" class="about">
   <div class="about__content">
-    <h2 class="about__heading">Sobre mí</h2>
+    <h2 class="about__heading">About Me</h2>
     <p class="about__description">
       {{ description }}
     </p>
   </div>
   <div class="about__stack">
-    <h3 class="about__stack-title">Stack principal</h3>
+    <h3 class="about__stack-title">Core Stack</h3>
     <ul class="about__stack-list">
       @for (tech of stack; track tech) {
         <li>
@@ -25,7 +25,7 @@
   @if (selectedTechInfo(); as info) {
     <div class="about__tech-overlay" (click)="closeTechInfo()">
       <div class="about__tech-info" (click)="$event.stopPropagation()">
-        <button type="button" class="about__tech-close" (click)="closeTechInfo()" aria-label="Cerrar">×</button>
+        <button type="button" class="about__tech-close" (click)="closeTechInfo()" aria-label="Close">×</button>
         <h4 class="about__tech-name">{{ info.name }}</h4>
         <p class="about__tech-description">{{ info.description }}</p>
         <span class="about__tech-proficiency">{{ info.proficiency }}</span>

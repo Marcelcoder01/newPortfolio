@@ -34,28 +34,28 @@ export class ContactComponent {
       title: 'Rafael Oriol',
       subtitle: 'Back-end Developer - Aktrion Group',
       description:
-        '“Marcel destaca por sus habilidades en el Front, es una persona ágil y con unas habilidades comunicativas muy eficientes”'
+        '“Marcel stands out for his front-end expertise; he is agile and communicates with impressive clarity.”'
     },
     {
       title: 'Ester Sanchez Jimenez',
       subtitle: 'Full-stack Developer',
       description:
-        '“Marcel es un desarrollador frontend excepcional. Su habilidad para resolver problemas y su compromiso con la calidad son evidentes en cada proyecto.”'
+        '“Marcel is an exceptional frontend developer. His problem-solving skills and commitment to quality are evident in every project.”'
     },
     
   ];
 
   protected readonly blogs = [
     {
-      title: 'Arquitectura Angular Avanzada',
-      subtitle: 'Programación declarativa con RxJS y Angular',
-      description: 'Cómo este enfoque permite construir aplicaciones más reactivas, escalables y mantenibles, mediante el uso de flujos de datos y operadores funcionales.',
+      title: 'Advanced Angular Architecture',
+      subtitle: 'Declarative programming with RxJS and Angular',
+      description: 'How this approach enables more reactive, scalable, and maintainable applications by leveraging data streams and functional operators.',
       actionUrl: 'https://careers.edicomgroup.com/blogtech/frontend-programacion-declarativa-con-rxjs-y-angular/#punto5.5'
     },
     {
       title: 'Pet network',
       subtitle: 'Open Source',
-      description: 'Aplicacion hecha por puro hobby, donde he creado componentes UI customizados con Angular Material y puse en marcha un flujo 100% reactivo, sin suscripciones con standalone components y unit-testing.',
+      description: 'Hobby project where I crafted custom UI components with Angular Material and set up a 100% reactive flow using standalone components and unit testing, without manual subscriptions.',
       actionUrl: 'https://github.com'
     }
   ];

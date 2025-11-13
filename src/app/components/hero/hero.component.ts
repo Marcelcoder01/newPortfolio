@@ -16,7 +16,7 @@ export class HeroComponent implements OnDestroy {
 
   protected readonly experienceRange = '2022 — 2025';
   protected readonly quote =
-    '“La habilidad y los conocimientos suman, la actitud multiplica”  - Victor Küppers';
+    '“Skills and knowledge add up; attitude multiplies.” - Victor Küppers';
   protected readonly emailAddress = 'marcel.soto324@gmail.com';
 
   protected showEmail = false;

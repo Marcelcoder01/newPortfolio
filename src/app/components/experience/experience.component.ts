@@ -32,24 +32,25 @@ export class ExperienceComponent {
   protected readonly experiences: Experience[] = [
     {
       role: 'Lead Front-End Engineer',
-      company: 'Aktrion Group · Híbrido',
-      period: '2024 — Actualidad',
+      company: 'Aktrion Group · Hybrid',
+      period: '2024 — Present',
       description:
-        'Lidero la arquitectura front-end en Angular, aplicando principios de arquitectura limpia, optimización de rendimiento y gestión de estado. Enfocado en la escalabilidad, mantenibilidad y calidad del código.'
+        'I lead the front-end architecture in Angular, applying clean architecture principles, performance optimization, and state management. Focused on scalability, maintainability, and code quality.'
     },
     {
       role: 'Front-End Developer',
       company: 'Ingematic Consulting',
       period: '2023 — 2024',
       description:
-        'Diseñé interfaces modulares con Angular Material, priorizando el rendimiento, la usabilidad y la consistencia visual. Colaboré en la definición de buenas prácticas de desarrollo y diseño.'
+        'Designed modular interfaces with Angular Material, prioritizing performance, usability, and visual consistency. Collaborated on defining development and design best practices.'
     },
     {
       role: 'Full-Stack Developer',
       company: 'Workana / Codenotch Dev',
       period: '2022 — 2023',
       description:
-'Desarrollo de aplicaciones web full-stack con Angular y Node.js. Implementación de componentes reutilizables, conexión con APIs REST y despliegues básicos.'    }
+        'Developed full-stack web applications using Angular and Node.js. Implemented reusable components, integrated REST APIs, and performed basic deployments.'
+    }
   ];
 
   constructor() {
