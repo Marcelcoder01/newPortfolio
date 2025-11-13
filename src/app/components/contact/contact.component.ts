@@ -61,9 +61,9 @@ export class ContactComponent {
   ];
 
   protected readonly socialLinks = [
-    { label: 'LinkedIn', url: 'https://www.linkedin.com', icon: 'ri-linkedin-fill' },
-    { label: 'GitHub', url: 'https://github.com', icon: 'ri-github-fill' },
-    { label: 'Email', url: 'mailto:marcel@example.com', icon: 'ri-mail-send-fill' }
+    { label: 'LinkedIn', url: 'https://www.linkedin.com/in/marceldeveloper/', icon: 'ri-linkedin-fill' },
+    { label: 'GitHub', url: 'https://github.com/Marcelcoder01', icon: 'ri-github-fill' },
+    { label: 'Email', url: 'mailto:marcel.soto324@gmail.com', icon: 'ri-mail-send-fill' }
   ];
 
   constructor() {

@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild, afterNextRender, inject } from '@angular/core';
+import { Component, ElementRef, ViewChild, afterNextRender, inject, OnDestroy } from '@angular/core';
 import { ButtonComponent } from '../../shared/ui/button/button.component';
 import { SectionStateService } from '../../core/signals/section-state.service';
 
@@ -9,14 +9,20 @@ import { SectionStateService } from '../../core/signals/section-state.service';
   templateUrl: './hero.component.html',
   styleUrls: ['./hero.component.scss']
 })
-export class HeroComponent {
+export class HeroComponent implements OnDestroy {
   private readonly sectionState = inject(SectionStateService);
 
-  @ViewChild('heroSection', { static: true }) private sectionRef!: ElementRef<HTMLElement>;
+  @ViewChild('profileSection', { static: true }) private sectionRef!: ElementRef<HTMLElement>;
 
   protected readonly experienceRange = '2022 — 2025';
   protected readonly quote =
     '“La habilidad y los conocimientos suman, la actitud multiplica”  - Victor Küppers';
+  protected readonly emailAddress = 'marcel.soto324@gmail.com';
+
+  protected showEmail = false;
+  protected emailCopied = false;
+
+  private copyResetTimeoutId: number | null = null;
 
   constructor() {
     afterNextRender(() => {
@@ -26,13 +32,60 @@ export class HeroComponent {
   }
 
   protected downloadCv(): void {
-    // Placeholder para futura implementación
-    console.info('Download CV');
+    const fileId = '1GKtIWFt2K6sKTMMCWyxKOx9FjoUbzkWK';
+    const downloadUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
+  
+    const link = document.createElement('a');
+    link.href = downloadUrl;
+    link.download = 'CV.pdf'; 
+    link.target = '_blank';
+    link.click();
+  
   }
 
   protected contactMe(): void {
-    const contactElement = document.getElementById('contact');
-    contactElement?.scrollIntoView({ behavior: 'smooth' });
+    this.showEmail = true;
+    this.emailCopied = false;
+
+  }
+
+  protected async copyEmail(): Promise<void> {
+    const text = this.emailAddress;
+
+    if (typeof navigator !== 'undefined' && navigator?.clipboard?.writeText) {
+      try {
+        await navigator.clipboard.writeText(text);
+        this.setEmailCopiedState(true);
+        return;
+      } catch (error) {
+        console.error('No se pudo copiar el email al portapapeles:', error);
+      }
+    }
+
+    if (typeof window !== 'undefined') {
+      window.location.href = `mailto:${text}`;
+    }
+  }
+
+  ngOnDestroy(): void {
+    if (this.copyResetTimeoutId !== null) {
+      window.clearTimeout(this.copyResetTimeoutId);
+    }
+  }
+
+  private setEmailCopiedState(state: boolean): void {
+    this.emailCopied = state;
+
+    if (this.copyResetTimeoutId !== null) {
+      window.clearTimeout(this.copyResetTimeoutId);
+    }
+
+    if (state) {
+      this.copyResetTimeoutId = window.setTimeout(() => {
+        this.emailCopied = false;
+        this.copyResetTimeoutId = null;
+      }, 2600);
+    }
   }
 }
 
