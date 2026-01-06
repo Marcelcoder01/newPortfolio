@@ -15,7 +15,6 @@
   &__column:first-child {
     grid-column: 1 / span 6;
     min-height: 75vh;
-
   }
 
   &__column:last-child {
@@ -30,7 +29,7 @@
     text-transform: uppercase;
     letter-spacing: 0.12em;
     font-size: 1rem;
-    color: #8be9fd;
+    color: var(--accent-primary);
   }
 
   &__subheading {
@@ -38,7 +37,7 @@
     text-transform: uppercase;
     font-size: 0.95rem;
     letter-spacing: 0.1em;
-    color: rgba(255, 255, 255, 0.7);
+    color: var(--text-secondary);
   }
 
   &__cards {
@@ -47,11 +46,11 @@
   }
 
   &__cta {
-    background: rgba(16, 18, 24, 0.9);
+    background: rgba(var(--bg-card-rgb), 0.9);
     border-radius: 28px;
     padding: clamp(2rem, 4vw, 3rem);
-    border: 1px solid rgba(139, 233, 253, 0.15);
-    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(var(--border-color-rgb), 0.15);
+    box-shadow: 0 25px 60px var(--shadow-color);
     display: grid;
     gap: 1.5rem;
   }
@@ -61,10 +60,10 @@
     font-size: clamp(1.8rem, 4vw, 2.8rem);
     font-weight: 600;
     line-height: 1.2;
-    color: rgba(255, 255, 255, 0.85);
+    color: var(--text-secondary);
 
     span {
-      color: #8be9fd;
+      color: var(--accent-primary);
       display: block;
     }
   }
@@ -78,7 +77,7 @@
   }
 
   &__social-link {
-    color: rgba(255, 255, 255, 0.7);
+    color: var(--text-secondary);
     text-decoration: none;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -86,7 +85,7 @@
     transition: color 0.3s ease;
 
     &:hover {
-      color: #00ff99;
+      color: var(--accent-secondary);
     }
   }
 
@@ -105,5 +104,3 @@
     }
   }
 }
-
-
