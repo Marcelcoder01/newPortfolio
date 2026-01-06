@@ -1,21 +1,22 @@
 <nav class="side-nav">
-  <ul class="side-nav__list">
-    @for (section of sections(); track section) {
-    <li>
-      <button
-        type="button"
-        class="side-nav__item"
-        [class.side-nav__item--active]="activeSection() === section"
-        (click)="scrollTo(section)"
-      >
-        {{ section }}
-      </button>
-    </li>
-    }
-    <li>
+  <div class="side-nav__container">
+    <ul class="side-nav__sections">
+      @for (section of sections(); track section) {
+      <li>
+        <button
+          type="button"
+          class="side-nav__item"
+          [class.side-nav__item--active]="activeSection() === section"
+          (click)="scrollTo(section)"
+        >
+          {{ section }}
+        </button>
+      </li>
+      }
+    </ul>
+
+    <div class="side-nav__actions">
       <div class="side-nav__divider"></div>
-    </li>
-    <li>
       <button
         type="button"
         class="side-nav__item side-nav__theme-toggle"
@@ -58,6 +59,6 @@
         </svg>
         }
       </button>
-    </li>
-  </ul>
+    </div>
+  </div>
 </nav>
